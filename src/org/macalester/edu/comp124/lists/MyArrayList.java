@@ -83,10 +83,12 @@ public class MyArrayList<E> {
     public void add(int index, E elem) {
         if (elements.length == currentSize) {
             this.expandSize();
+
         }
-        E newArray[] = elements;
+        E newArray[] = elements.clone();
         for (int pos = index; pos < currentSize; pos++) {
-            newArray[pos + 1] = elements[pos];
+            newArray[pos+1] = elements[pos];
+
         }
         newArray[index] = elem;
         elements = newArray;
@@ -105,6 +107,7 @@ public class MyArrayList<E> {
         E[] newArray = newArrayOfE(elements.length * 2);
         for (int pos = 0; pos < currentSize; pos++) {
             newArray[pos] = elements[pos];
+
         }
         elements = newArray;
     }
