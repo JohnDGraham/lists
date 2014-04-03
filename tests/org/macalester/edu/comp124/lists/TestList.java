@@ -7,7 +7,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class TestList {
-    private MyArrayList<String> list = new MyArrayList<String>();
+    private MyLinkedList<String> list = new MyLinkedList<String>();
 
     @Test
 	public void testGet() {
@@ -19,7 +19,7 @@ public class TestList {
 		assertEquals(list.get(1), "bar");
 		assertEquals(list.get(2), "baz");
 	}
-	
+
 	/**
 	 * Tests that appending at the end of a list works.
 	 */
